@@ -4,16 +4,16 @@
         <File name="FileLogger" fileName="./stockes.log">
             <PatternLayout pattern="%d{HH:mm} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
-        <!-- CONSOLE DISABLED
+
             <Console name="ConsoleLogger" target="SYSTEM_OUT">
                 <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
             </Console>
-        -->
+
     </Appenders>
     <Loggers>
-        <Root level="trace" additivity="false">
+        <Root level="WARN" additivity="false">
             <AppenderRef ref="FileLogger"/>
-            <!--<AppenderRef ref="ConsoleLogger"/>-->
+            <AppenderRef ref="ConsoleLogger"/>
         </Root>
     </Loggers>
 </Configuration>
